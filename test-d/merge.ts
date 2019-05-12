@@ -12,3 +12,9 @@ type Bar = {
 
 const ab: Merge<Foo, Bar> = {a: 1, b: 2};
 expectType<{a: number; b: number}>(ab);
+
+type Bas = {
+	b: string;
+};
+const ab2: Merge<Foo, Bas> = {a: 1, b: '2'};
+expectType<{a: number; b: string}>(ab2);
